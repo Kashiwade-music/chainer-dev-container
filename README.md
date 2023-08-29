@@ -28,7 +28,6 @@
 ## Test if the environment was built correctly
 - Execute below command
   ```sh
-  cd ./temp
   wget https://github.com/chainer/chainer/archive/v7.8.1.tar.gz
   tar xzf v7.8.1.tar.gz
   python chainer-7.8.1/examples/mnist/train_mnist.py -g 0
