@@ -28,6 +28,7 @@
 ## Test if the environment was built correctly
 - Execute below command
   ```sh
+  mkdir -p temp && cd temp
   wget https://github.com/chainer/chainer/archive/v7.8.1.tar.gz
   tar xzf v7.8.1.tar.gz
   python chainer-7.8.1/examples/mnist/train_mnist.py -g 0
@@ -66,4 +67,33 @@
   18          0.0100734   0.132682              0.997266       0.9815                    24.5442       
   19          0.00892782  0.106411              0.997266       0.9833                    25.7678       
   20          0.00860138  0.117193              0.997383       0.9827                    27.0023       
+  ```
+
+- You can also check by executing the following command: `python -c 'import chainer; chainer.print_runtime_info()'`
+  ```sh
+  # this is example output
+
+  Platform: Linux-6.4.0-3-amd64-x86_64-with-glibc2.17
+  Chainer: 7.8.1
+  ChainerX: Not Available
+  NumPy: 1.21.6
+  CuPy:
+    CuPy Version          : 7.8.0
+    CUDA Root             : /usr/local/cuda
+    CUDA Build Version    : 11000
+    CUDA Driver Version   : 12000
+    CUDA Runtime Version  : 11000
+    cuBLAS Version        : 11200
+    cuFFT Version         : 10201
+    cuRAND Version        : 10201
+    cuSOLVER Version      : (10, 6, 0)
+    cuSPARSE Version      : 11101
+    NVRTC Version         : (11, 0)
+    cuDNN Build Version   : 8002
+    cuDNN Version         : 8005
+    NCCL Build Version    : 2708
+    NCCL Runtime Version  : 2708
+    CUB Version           : Enabled
+    cuTENSOR Version      : None
+  iDeep: Not Available
   ```
